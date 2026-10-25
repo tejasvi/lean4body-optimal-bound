@@ -1,0 +1,24 @@
+name: Palomar preflight
+
+# Runs Palomar's own verification job (the same three kernels and comparator
+# check as a registry submission) on this repository's commit. It is
+# predictive only and is not a registry submission.
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  palomar-preflight:
+    uses: PalomarRegistry/PalomarSubmission/.github/workflows/submission.yml@c02bbeaed888df45c4e28c4e99dba540ad21552a
+    with:
+      repository: ${{ github.repository }}
+      commit: ${{ github.sha }}
+      pipeline_commit: c02bbeaed888df45c4e28c4e99dba540ad21552a
+      request_id: preflight001
+      mode: full
+      execution_profile: palomar-standard-v1
+      options: '{"comparator_config_path":"comparator.json","authorization_relationship":"I am a responsible author or maintainer"}'

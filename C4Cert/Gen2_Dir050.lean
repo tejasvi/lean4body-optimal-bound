@@ -1,0 +1,42 @@
+module
+
+public import C4Check
+
+public section
+
+/-! Pieces of cell `17` of the direct root grid: `decide +kernel` checks that `checkBoxH2` succeeds on
+each piece with its hint; the cell is assembled in a later module. -/
+
+set_option Elab.async false
+
+namespace C4.Cert.Gen2_Dir050
+
+theorem k17_72 : (checkBoxH2 dirModeTFM depth (splitBox (splitBox (splitBox (splitBox (splitBox (dir2CellBox 17) 1).2 2).2 3).2 1).1 2).2
+      2231749240250930129300062676776176993884639300516641364325333850147474831041686745181219298859082683861473930099390521951823018022089971984118073114074694158342557270156495888497576203076588320542410856301469167302137112150666021795).isSome = true := by
+  decide +kernel
+
+theorem k17_73 : (checkBoxH2 dirModeTFM depth (splitBox (splitBox (splitBox (splitBox (splitBox (splitBox (splitBox (dir2CellBox 17) 1).2 2).2 3).2 1).2 2).1 3).1 2).1
+      100329928874180838875479297420675197895354917033625785538665536118458616909161049801359110181987320461926705892551568009928252329854767583868290033252676722787610091770286347724882652655231414812838275887314132651431402142152205834046753).isSome = true := by
+  decide +kernel
+
+theorem k17_74 : (checkBoxH2 dirModeTFM depth (splitBox (splitBox (splitBox (splitBox (splitBox (splitBox (splitBox (dir2CellBox 17) 1).2 2).2 3).2 1).2 2).1 3).1 2).2
+      394960602250099726787936491991955771947019731924881168924636129378619060310651807527996350357841954080680201608379137000291661585381584878729467070365665036698255530770729887252072784634120670403778634580089368215520772304618572204099873).isSome = true := by
+  decide +kernel
+
+theorem k17_75 : (checkBoxH2 dirModeTFM depth (splitBox (splitBox (splitBox (splitBox (splitBox (splitBox (dir2CellBox 17) 1).2 2).2 3).2 1).2 2).1 3).2
+      81974557795265124874679411161559371201605364797148495659594378297843997825539473967929033731893068712818615569608).isSome = true := by
+  decide +kernel
+
+theorem k17_76 : (checkBoxH2 dirModeTFM depth (splitBox (splitBox (splitBox (splitBox (splitBox (splitBox (splitBox (dir2CellBox 17) 1).2 2).2 3).2 1).2 2).2 3).1 1).1
+      134938890125350823437298285081458352179109383920230783971141809342328944017280797001103428473269102163241768711272).isSome = true := by
+  decide +kernel
+
+theorem k17_77 : (checkBoxH2 dirModeTFM depth (splitBox (splitBox (splitBox (splitBox (splitBox (splitBox (splitBox (dir2CellBox 17) 1).2 2).2 3).2 1).2 2).2 3).1 1).2
+      1591447610648413712244369672810950958414674794133908506628807730621364415841236326437863467775285288626961460938072).isSome = true := by
+  decide +kernel
+
+theorem k17_78 : (checkBoxH2 dirModeTFM depth (splitBox (splitBox (splitBox (splitBox (splitBox (splitBox (dir2CellBox 17) 1).2 2).2 3).2 1).2 2).2 3).2
+      163076926544213329682709790225725667018928135870761477607415297442562775692494543897513436848439898239551644392).isSome = true := by
+  decide +kernel
+
+end C4.Cert.Gen2_Dir050
